@@ -1,0 +1,39 @@
+header{
+    text-align: center;
+    padding: 1rem;
+    background-color: #343a40;
+    color: white;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+main{
+    padding: 15px;
+}
+
+footer{
+    text-align: center;
+    padding: 1rem;
+    background-color: #343a40;
+    color: white;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);  
+}
+
+.chatBox{
+    overflow-y: scroll;
+    border: 1px solid darkgray;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 15px;
+    height: 400px;
+}
+
+.usersListBox{
+    border: 1px solid darkgray;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 15px;
+    height: 400px;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "websocket_simple_chat",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "KKK",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server",
+    "start": "node server"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "path": "^0.12.7",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}

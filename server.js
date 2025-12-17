@@ -54,13 +54,13 @@ app.get('/main', (req, res) => {
 io.on('connection', (socket) => {
     console.log('Új felhasználó csatlakozott: ' + socket.id);
 
-    socket.on('join-room', ( nickname, roomId ) => {
-        socket.join(roomId);
-        socket.to(roomId).emit('system-message', `${nickname} csatlakozott a szobához.`);
+    socket.on('join-room', ( nickname, room) => {
+        socket.join(room);
+        socket.to(room).emit('system-message', `${nickname} csatlakozott a szobához.`);
     });
 
-    socket.on('leave-room', ( nickname, roomId ) => {
-        socket.to(roomId).emit('system-message', `${nickname} elhagyta a szobát.`);
+    socket.on('leave-room', ( nickname, room ) => {
+        socket.to(room).emit('system-message', `${nickname} elhagyta a szobát.`);
         socket.disconnect();
     });
 });

@@ -1,0 +1,39 @@
+<div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4 text-center">
+
+    <h3 class="mb-3">Belépés</h3>
+
+    <% if (error) { %> 
+        
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <%= error %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        
+    <% } %>
+
+    <form action="/main" method="get">
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="nickname" name="nickname" placeholder="" value="<%= nickname %>">
+            <label for="nickname">Név</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <select class="form-select" id="room" name="room" aria-label="">
+                <option value="">Válassz...</option>
+              
+                <% rooms.forEach((item) => { %>
+                    <option value="<%= item.id %>" 
+                        <%= (item.id === room) ? 'selected' : '' %>
+                    ><%= item.label %></option>    
+                <% }); %>
+
+            </select>
+            <label for="room">Csevegőszoba</label>
+        </div>
+
+        <button class="btn btn-primary mb-3">Belépés a csevegésbe</button>
+
+    </form>
+
+</div>

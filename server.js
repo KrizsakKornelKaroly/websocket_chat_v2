@@ -19,10 +19,7 @@ const ERRORS = {
     missingFields: 'Kérlek, tölts ki minden mezőt!',
 };
 
-const getRoomById = (roomId) => {
-    return ROOMS.find(room => room.id === roomId);
-}
-
+const getRoomById = (roomId) => { return ROOMS.find((room) => room.id === roomId)};
 
 app.set('view engine', 'ejs');
 
@@ -38,12 +35,12 @@ app.get('/', (req, res) => {
 app.get('/main', (req, res) => {
     const { nickname, room } = req.query;
     if (!nickname || !room) {
-        return res.redirect('/?error=missingFields&nickname=' + nickname + '&room=' + room);
+        return res.redirect(`/?error=missingFields&nickname=${nickname}&room=${room}`);
     }
 
     const chatConfig = {
         nickname,
-        roomId: getRoomById(room).id,
+        roomId: room,
         roomLabel: getRoomById(room).label
     }
 

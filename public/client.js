@@ -4,15 +4,6 @@ const config = window.CHAT_CONFIG;
 const leaveRoomBtn = document.getElementById('leaveRoom');
 const messagesUl = document.getElementById('messages');
 
-leaveRoomBtn.addEventListener('click', () => {
-    socket.emit('leave-room', {
-        nickname: config.nickname,
-        room: config.roomId
-    });
-    window.location.href = '/?nickname=' + config.nickname;
-});
-
-
 
 const renderMessage = (nickname, message, type) => {
     const timestamp = new Date().toLocaleTimeString();
@@ -26,6 +17,14 @@ const renderMessage = (nickname, message, type) => {
     messagesUl.appendChild(li);
 };
 
+
+leaveRoomBtn.addEventListener('click', () => {
+    socket.emit('leave-room', {
+        nickname: config.nickname,
+        room: config.roomId
+    });
+    window.location.href = `/?nickname=${config.nickname}`;
+});
 
 socket.emit('join-room', {
     nickname: config.nickname,

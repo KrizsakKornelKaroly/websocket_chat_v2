@@ -1,0 +1,62 @@
+header{
+    text-align: center;
+    padding: 30px;
+}
+
+main{
+    padding: 15px;
+}
+
+footer{
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 80%;
+}
+
+.chatBox{
+    border: 1px solid gray;
+    border-radius: 6px;
+    min-height: 500px;
+    max-height: 500px;
+    padding: 15px;
+    background-color: rgba(0,0,0,0.2);
+    box-shadow: inset 0 0 15px black;
+    overflow-y: scroll;
+}
+
+.usersListBox{
+    border: 1px solid gray;
+    border-radius: 6px;
+    padding: 15px;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+#usersList{
+    list-style-type: none;
+    list-style-position: inside;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+#usersList > li {
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.w-full{
+    width: 100%;
+}
+.systemMsg{
+    background-color: darkslategrey;
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+
+.msgList{
+    list-style-type: none;
+    list-style-position: inside;
+    padding-left: 0;
+    margin-left: 0;
+}
